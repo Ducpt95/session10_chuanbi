@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:inherit;
+        }
+        .wrapper{
+            width:100%;
+            height:100%;
+            background-image: linear-gradient(0,rgb(170, 221, 219),white);
+        }
+        .header{
+            text-align:center;
+        }
+        .info{
+            text-transform:capitalize;
+            font-weight:600;
+            margin-left:10%;
+            padding:20px 0;
+        }
+        .detail{
+            display:flex;
+            margin: 5px 0;
+        }
+        .post-detail{
+            min-width:20%;
+            margin-left:20px;
+            font-weight:500px;
+            font-style:italic;
+        }
+        .input{
+            flex:1;
+            max-width:30%;
+            text-transform: capitalize;
+            font-weight:400;
+            color:rgb(19, 17, 17);
+            /* background-color:black */
+        }
+        .click{
+            display:block;
+            background:none;
+            outline:none;
+            border:1px solid gray;
+            border-radius:5px;
+            cursor:pointer;
+            width:50px;
+            height:20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h1 class="header">Sơ Yếu Lý Lịch</h1>
+    <div id="box1">
+        <p class="info">THÔNG TIN CÁ NHÂN</p>
+        <ul class="post-info">
+            <li class="detail"><label class="post-detail">Họ Tên</label><p id="id1" class="input"></p><button class="click" onclick="info1()">Click</button></li>
+            <li class="detail"><label class="post-detail">Ngày Sinh</label><p id="id2" class="input"></p><button class="click" onclick="info2()">Click</button></li>
+            <li class="detail"><label class="post-detail">Giới Tính</label><p id="id3" class="input"></p><button class="click" onclick="info3()">Click</button></li>
+        </ul>
+</div>
+
+
+
+
+
+
+    <script>
+        // var a=prompt('Enter the first number');
+        // var b=prompt('Enter the second number');
+        // var c=prompt('Enter the third number');
+
+        
+        // document.write('The biggest number is: ')
+        // if (a>b&&a>c) {
+        //     document.write(a)
+
+        // }else{if(b>a&&b>c){
+        //     document.write(b)
+        // } else{document.write(c)}}
+        //  var name=prompt('Nhập Họ Tên Của Bạn');
+        //  var age=prompt('Nhập Tuổi Của Bạn');
+        //  var sex=prompt('Nhập Giới Tính Của Bạn')
+        //  document.getElementById("id1").innerHTML = name;
+        //  document.getElementById("id2").innerHTML = age;
+        //  document.getElementById("id3").innerHTML = sex;
+         function info1() {
+            var name = prompt("Enter your name");
+            if (name!=null){
+                document.getElementById('id1').innerHTML = name
+            }
+         }
+         function info2(){
+            var age = prompt("Enter your age");
+            if(age!=null){
+                document.getElementById("id2").innerHTML = age
+            }
+         }
+         function  info3() {
+            var sex=prompt("What is your sex?");
+            if (sex!=null){
+                document.getElementById("id3").innerHTML = sex
+            }
+         }
+
+    </script>
+</body>
+</html>
